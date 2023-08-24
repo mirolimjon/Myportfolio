@@ -1,0 +1,187 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio</title>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span>My</span>Portfolio
+        </div>
+        <ul class="navList">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div id="menu-icon" class="bx bx-menu">
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hi! I'm Mirolim</h1>
+            <div class="change-text">
+                <h3>And I'm</h3>
+                <h3>
+                    <span class="word">Backend Developer</span>
+                    <span class="word">Machine Learning Engineer</span>
+                    <span class="word">Deep Learning Engineer</span>
+                </h3>
+            </div>
+
+            <div style="width: 400px;" class="info-box">
+                <div class="email-info">
+                    <h5>Email :</h5>
+                    <span>@mirolimtolipov@gmail.com</span>
+                </div>
+
+                <div class="tel-info">
+                    <h5>Tel :</h5>
+                    <span>+998-91-060-17-09</span>
+                </div>
+            </div>
+
+            <div class="btn-box">
+                <a href="{% static 'Final.pdf' %}" download="{% static 'Final.pdf' %}" class="btn">Download CV</a>
+                <a style="padding: 20px;" href="#contact" class="btn">Contact with me!</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/mirolim.tolibov/"><i class="bx bxl-facebook"></i></a>
+                <a href="https://t.me/mirolimtolipov"><i class='bx bxl-telegram'></i></a>
+                <a href="https://www.instagram.com/mirolim.tolibov/"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/mirolimtolipov/"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/mirolimjon"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+
+        <div class="home-image">
+            <div class="image-box">
+                <img src="{% static './static/images/IMG_20230514_115325_096.jpg' %}" alt="">
+            </div>
+            <!-- <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path id="blob" fill="#12f7ff">
+                        <animate attributeName="d"
+                        dur="10000ms"
+                        repeatCount="indefinite"
+                        values="
+                        M391.5,300.5Q351,351,300.5,409Q250,467,166.5,442Q83,417,66.5,333.5Q50,250,81,181Q112,112,181,96.5Q250,81,319,96.5Q388,112,410,181Q432,250,391.5,300.5Z
+
+                        M431.5,317Q384,384,317,400Q250,416,183,400Q116,384,77.5,317Q39,250,94,199.5Q149,149,199.5,121Q250,93,295,126.5Q340,160,409.5,205Q479,250,431.5,317Z
+
+                        M406.5,333.5Q417,417,333.5,453.5Q250,490,176.5,443.5Q103,397,63.5,323.5Q24,250,58,171Q92,92,171,47.5Q250,3,325,51.5Q400,100,398,175Q396,250,406.5,333.5Z
+
+                        M367.5,304Q358,358,304,366.5Q250,375,190,372.5Q130,370,113.5,310Q97,250,123,199.5Q149,149,199.5,87.5Q250,26,337.5,50.5Q425,75,401,162.5Q377,250,367.5,304Z
+
+                        M427,328.5Q407,407,328.5,439Q250,471,178,432.5Q106,394,59,322Q12,250,54,173Q96,96,173,83Q250,70,304,106Q358,142,402.5,196Q447,250,427,328.5Z
+                        "
+                        ></animate>
+                    </path>
+                </svg>
+            </div> -->
+        </div>
+    </section>
+
+
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <span>Let me introduce myself</span>
+            <h2>About me</h2>
+            <p>I’m Mirolim, I graduated from the Information Technology department of NCUT university in 2023. I'm interested the artificial intelligence science. To improve myself in this field, I first started by learning Data Science topics, then continued with learning Machine Learning and Deep Learning topics. In this learning path, I finished courses and made projects. Currently, I can inspect and visualize Data, build and train machine learning and deep learning models, create image datasets and train in the yolov5 library. I can work fields of Data Science, Data Visualization, Machine Learning, Deep Learning, and computer vision in the junior position. In this fields, I continue to learn new technology and finish the courses and make new projects. I'm prone to teamwork and always ready to learn new technology. In the future, I want to be an expert on artificial intelligence technology, and I'm always ready to work on this road.</p>
+        </div>
+    </section>
+
+
+    <section id="skills" class="skills">
+        <div class="main-text">
+            <span>Technical and Professional</span>
+            <h2>My Skills</h2>
+        </div>
+
+        <div class="skill-main">
+            {% for skill in skills %}
+            <div class="btn-box">
+                <p style="cursor: pointer;" class="btn">{{ skill.title }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="main-text">
+            <span>What i'll do for you</span>
+            <h2>My Projects</h2>
+        </div>
+
+        <div class="container">
+            <div class="portfolio-gallery">
+                {% for p in projects %}
+                <div class="port-box">
+                    <div class="port-image">
+                        <img src="{{ p.image.url }}" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>{{ p.title }}</h3>
+                        <p>{{ p.text }}</p>
+                        <div class="links">
+                            {% if p.github %}
+                            <a href="{{ p.github }}"><i class='bx bxl-github'></i></a>
+                            {% endif %}
+
+                            {% if p.g_drive %}
+                            <a href="{{ p.g_drive }}"><i class='bx bxl-google'></i></a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}              
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="main-text">
+            <span>Ask me question</span>
+            <h2>Contact with me</h2>
+        </div>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your name" id="">
+            <input type="email" name="email" placeholder="example@gmail.con" id="">
+            <input type="text" name="number" placeholder="Your number">
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            
+            <div class="btn-box formBtn">
+                <button type="submit" class="btn">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2023 || All Right Reserved</p>
+        <a href="#home"><i class='bx bx-up-arrow-circle' ></i></a>
+    </footer>
+
+    <script src="{% static './static/js/main.js' %}"></script>
+</body>
+</html>
