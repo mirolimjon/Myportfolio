@@ -44,7 +44,7 @@
                 </h3>
             </div>
 
-            <div class="info-box">
+            <div style="width: 400px;" class="info-box">
                 <div class="email-info">
                     <h5>Email :</h5>
                     <span>@mirolimtolipov@gmail.com</span>
@@ -58,14 +58,15 @@
 
             <div class="btn-box">
                 <a href="{% static 'Final.pdf' %}" download="{% static 'Final.pdf' %}" class="btn">Download CV</a>
-                <a style="padding: 20px;" href="#" class="btn">Contact with me!</a>
+                <a style="padding: 20px;" href="#contact" class="btn">Contact with me!</a>
             </div>
 
             <div class="social-icons">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class='bx bxl-telegram'></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.facebook.com/mirolim.tolibov/"><i class="bx bxl-facebook"></i></a>
+                <a href="https://t.me/mirolimtolipov"><i class='bx bxl-telegram'></i></a>
+                <a href="https://www.instagram.com/mirolim.tolibov/"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/mirolimtolipov/"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/mirolimjon"><i class='bx bxl-github'></i></a>
             </div>
         </div>
 
@@ -103,7 +104,7 @@
         <div class="about-content">
             <span>Let me introduce myself</span>
             <h2>About me</h2>
-            <p>I’m Mirolim, I graduated from the Information Technology department of NCUT university this year. I'm interested the artificial intelligence science. To improve myself in this field, I first started by learning Data Science topics, then continued with learning Machine Learning and Deep Learning topics. In this learning path, I finished courses and made projects. Currently, I can inspect and visualize Data, build and train machine learning and deep learning models, create image datasets and train in the yolov5 library. I can work fields of Data Science, Data Visualization, Machine Learning, Deep Learning, and computer vision in the junior position. In this fields, I continue to learn new technology and finish the courses and make new projects. I'm prone to teamwork and always ready to learn new technology. In the future, I want to be an expert on artificial intelligence technology, and I'm always ready to work on this road.</p>
+            <p>I’m Mirolim, I graduated from the Information Technology department of NCUT university in 2023. I'm interested the artificial intelligence science. To improve myself in this field, I first started by learning Data Science topics, then continued with learning Machine Learning and Deep Learning topics. In this learning path, I finished courses and made projects. Currently, I can inspect and visualize Data, build and train machine learning and deep learning models, create image datasets and train in the yolov5 library. I can work fields of Data Science, Data Visualization, Machine Learning, Deep Learning, and computer vision in the junior position. In this fields, I continue to learn new technology and finish the courses and make new projects. I'm prone to teamwork and always ready to learn new technology. In the future, I want to be an expert on artificial intelligence technology, and I'm always ready to work on this road.</p>
         </div>
     </section>
 
@@ -117,7 +118,7 @@
         <div class="skill-main">
             {% for skill in skills %}
             <div class="btn-box">
-                <a href="" style="cursor: pointer;" class="btn">{{ skill.title }}</a>
+                <p style="cursor: pointer;" class="btn">{{ skill.title }}</p>
             </div>
             {% endfor %}
         </div>
